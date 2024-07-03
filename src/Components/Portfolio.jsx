@@ -31,46 +31,61 @@ const imageAltText = "desktop with books and laptop";
  */
 const projectList = [
   {
-    title: "10 Things To Know About Azure Static Web Apps 🎉",
+    title: "Scalable Web Application Deployment with AWS 🎉",
     description:
-      "Collaboration to create a beginner friendly article to help explain Azure Static Web Apps and tooling to get started.",
-    url: "https://dev.to/azure/10-things-to-know-about-azure-static-web-apps-3n4i",
+      "For my inaugural project leveraging Amazon Web Services (AWS), I embarked on developing a scalable web application designed to handle high traffic and ensure reliability. The project involved setting up a robust cloud infrastructure utilizing various AWS services, including",
+    url: "https://d18fw33zvmt3wn.cloudfront.net/",
   },
   {
-    title: "Web Development for Beginners",
+    title: "Toda - Streamlined Task Management",
     description:
-      "Contributed sketch note imagery to accompany each lesson. These help provide visual representation of what is being taught.",
-    url: "https://github.com/microsoft/web-dev-for-beginners",
+      "Toda is a task management web application designed to simplify and enhance productivity for individuals and teams. The goal of this project was to create an intuitive, user-friendly interface that allows users to easily organize, prioritize, and track their tasks.",
+    url: "http://narentodoapp.ccbp.tech",
   },
   {
-    title: "My Resume Site",
+    title: "Enhanced Wikipedia Viewer",
     description:
-      "Created from Microsoft's resume workshop and deployed to GitHub pages. Includes my experience and design abilities.",
-    url: "https://github.com/microsoft/workshop-library/tree/main/full/build-resume-website",
+      "The Enhanced Wikipedia Viewer project aims to improve the user experience of browsing and accessing Wikipedia content. By incorporating modern web development practices and user-centric design principles, this project seeks to make Wikipedia's vast repository of knowledge more accessible and engaging.",
+    url: "http://wikipedia.naren3.s3-website.ap-south-1.amazonaws.com/",
   },
   {
-    title: "GitHub Codespaces and github.dev",
+    title: "Gen-AI - Intelligent Content Generation",
     description:
-      "Video interview to explain when to use GitHub.dev versus GitHub Codespaces, and how best to use each tool.",
-    url: "https://www.youtube.com/watch?v=c3hHhRME_XI",
+      "Gen-AI is an innovative project aimed at harnessing the power of artificial intelligence to generate high-quality, contextually relevant content. This project explores the capabilities of advanced machine learning models to assist with content creation, offering users a smart and efficient way to produce written material.",
+    url: "http://narengenai.ccbp.tech",
+  },
+  {
+    title: "Plan Your Trip - Personalized Travel Planning",
+    description: "Plan Your Trip is a comprehensive web application designed to streamline and enhance the travel planning experience for users. This project aims to provide a one-stop solution for all travel-related needs, from itinerary creation to booking accommodations and activities.",
+    url: "http://narentourisum.ccbp.tech",
+  },
+  {
+    title: "Interactive Sales Dashboard with Power BI",
+    description: "The Interactive Sales Dashboard project leverages the capabilities of Microsoft Power BI to create a dynamic and insightful visualization tool for sales data analysis. This project aims to provide stakeholders with real-time insights into sales performance, helping to drive informed decision-making and strategic planning",
+    url: "https://drive.google.com/file/d/1UUyYunAcFr8L-wlywvIv9tNZinxhx6Q3/view?usp=drive_link",
+  },
+  {
+    title: "Country Population Finder",
+    description: "The Country Population Finder project is a web application designed to provide users with quick and accurate population data for countries around the world. This project aims to make demographic information easily accessible through a user-friendly interface and reliable data sources",
+    url: "http://findpopulation.naren2.s3-website.ap-south-1.amazonaws.com/",
   },
 ];
 
 const Portfolio = () => {
   return (
     <section className="padding" id="portfolio">
-      <h2 style={{ textAlign: "center" }}>Portfolio</h2>
+      <h2 style={{ textAlign: "center" }}>My Projects</h2>
       <div style={{ display: "flex", flexDirection: "row", paddingTop: "3rem" }}>
         <div style={{ maxWidth: "40%", alignSelf: "center" }}>
           <img
-            src={image}
+            src="https://res.cloudinary.com/dlowipiap/image/upload/v1705831555/WhatsApp_Image_2024-01-12_at_14.49.26_d7f8ce98_cz742i.jpg"
             style={{ height: "90%", width: "100%", objectFit: "cover" }}
             alt={imageAltText}
           />
         </div>
         <div className="container">
           {projectList.map((project) => (
-            <div className="box" key={project.title}>
+            <div className="box" style={{backgroundColor:"pink"}} key={project.title}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
                 <h3 style={{ flexBasis: "40px" }}>{project.title}</h3>
               </a>
